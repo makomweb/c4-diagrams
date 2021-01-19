@@ -1,0 +1,17 @@
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Context.puml
+' uncomment the following line and comment the first to use locally
+' !include C4_Context.puml
+
+LAYOUT_TOP_DOWN()
+'LAYOUT_AS_SKETCH()
+LAYOUT_WITH_LEGEND()
+
+title System Components diagram for Foobar use case
+
+System(a, "Foo", "Does this and that")
+System(b, "Bar", "Provides stuff and things")
+
+Rel(a, b, "Uses")
+
+@enduml
