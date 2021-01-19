@@ -1,17 +1,37 @@
 @startuml
-!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Context.puml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
 ' uncomment the following line and comment the first to use locally
-' !include C4_Context.puml
+' !include C4_Component.puml
 
-LAYOUT_TOP_DOWN()
-'LAYOUT_AS_SKETCH()
 LAYOUT_WITH_LEGEND()
 
-title Component diagram for Foobar use case
+title Component diagram for all kinds items
 
-System(a, "Foo", "Does this and that")
-System(b, "Bar", "Provides stuff and things")
+Person(person_a, "Person A", "Two", "Description")
 
-Rel(a, b, "Uses")
+Container_Boundary(api, "External") {
+    System(system_b, "System B", "Two", "Description")
+    Container(container_c, "Container C", "Two", "Description")
+}
+
+Component(component_d, "Component D", "Two", "Description")
+
+Person_Ext(person_e, "Person E", "Two", "Description")
+
+System_Boundary(system, "Fundamental") {
+    System_Ext(system_f, "System F", "Two", "Description")
+    Container_Ext(container_g, "Container G", "Two", "Description")
+}
+Component_Ext(component_h, "Component H", "Two", "Description")
+
+Boundary(storage, "Storage") {
+    ContainerDb(container_i, "Container I", "Two", "Description")
+    ContainerDb_Ext(container_j, "Container J", "Two", "Description")
+}
+
+' relations
+Rel(container_i, container_g, "Talks to")
+Rel(system_f, component_d, "Transfers to", "UDP")
+Rel(container_g, container_c, "Responds to")
 
 @enduml
