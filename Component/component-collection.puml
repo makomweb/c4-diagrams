@@ -1,0 +1,27 @@
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+' uncomment the following line and comment the first to use locally
+' !include C4_Component.puml
+
+LAYOUT_WITH_LEGEND()
+'LAYOUT_LEFT_RIGHT()
+
+title Component diagram for a collection of components
+
+Container_Boundary(system, "System XYZ") {
+    Person(person_a, "Person A", "Description")
+    System(system_b, "System B", "Description")
+    Container(container_c, "Container C", "Description")
+    Component(component_d, "Component D", "Description")
+    ContainerDb(container_i, "Container I", "Description")
+}
+
+Container_Boundary(externals, "Dependencies") {
+    Person_Ext(person_e, "Person E", "Description")
+    System_Ext(system_f, "System F", "Description")
+    Container_Ext(container_g, "Container G", "Description")
+    Component_Ext(component_h, "Component H", "Description")
+    ContainerDb_Ext(container_j, "Container J", "Description")
+}
+
+@enduml
