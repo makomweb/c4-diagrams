@@ -7,7 +7,7 @@ LAYOUT_TOP_DOWN()
 'LAYOUT_AS_SKETCH()
 LAYOUT_WITH_LEGEND()
 
-title System Components diagram for Foobar use case
+title Component diagram for Foobar use case
 
 System(a, "Foo", "Does this and that")
 System(b, "Bar", "Provides stuff and things")
