@@ -8,7 +8,7 @@ LAYOUT_WITH_LEGEND()
 
 title Component diagram for a collection of components
 
-Container_Boundary(system, "System XYZ") {
+Boundary(system, "System XYZ") {
     Person(person_a, "Person A", "Description")
     System(system_b, "System B", "Description")
     Container(container_c, "Container C", "Description")
@@ -16,7 +16,7 @@ Container_Boundary(system, "System XYZ") {
     ContainerDb(container_i, "Container I", "Description")
 }
 
-Container_Boundary(externals, "Dependencies") {
+Boundary(externals, "Dependencies") {
     Person_Ext(person_e, "Person E", "Description")
     System_Ext(system_f, "System F", "Description")
     Container_Ext(container_g, "Container G", "Description")
