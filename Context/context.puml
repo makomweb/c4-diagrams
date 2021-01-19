@@ -7,6 +7,8 @@ LAYOUT_TOP_DOWN()
 'LAYOUT_AS_SKETCH()
 LAYOUT_WITH_LEGEND()
 
+title System Context diagram for Internet Banking System
+
 Person(customer, "Customer", "A customer of Widgets Limited.")
 
 Enterprise_Boundary(c0, "Widgets Limited") {
